@@ -1,0 +1,8 @@
+mykey = "ayaz"
+ami = "ami-0889a44b331db0194"
+region = "us-east-1"
+instance_type = "t3a.medium"
+jenkins_server_secgr = "ayaz-petclinic-jenkins-server-secgr"
+jenkins-server-tag = "Jenkins Server of Petclinic"
+jenkins-profile = "ayaz-petclinic-jenkins-server-profile"
+jenkins-role = "ayaz-petclinic-jenkins-server-role"
