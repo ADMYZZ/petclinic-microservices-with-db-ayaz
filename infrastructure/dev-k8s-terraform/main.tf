@@ -3,15 +3,15 @@ provider "aws" {
 }
 
 variable "sec-gr-mutual" {
-  default = "Ayaz petclinic-k8s-mutual-sec-group"
+  default = "ayaz-petclinic-k8s-mutual-sec-group"
 }
 
 variable "sec-gr-k8s-master" {
-  default = "Ayaz petclinic-k8s-master-sec-group"
+  default = "ayaz-petclinic-k8s-master-sec-group"
 }
 
 variable "sec-gr-k8s-worker" {
-  default = "Ayaz petclinic-k8s-worker-sec-group"
+  default = "ayaz-petclinic-k8s-worker-sec-group"
 }
 
 data "aws_vpc" "name" {
@@ -127,7 +127,7 @@ resource "aws_security_group" "petclinic-kube-master-sg" {
 }
 
 resource "aws_iam_role" "petclinic-master-server-s3-role" {
-  name               = "Ayaz petclinic-master-server-role"
+  name               = "ayaz-petclinic-master-server-role"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -148,7 +148,7 @@ EOF
 }
 
 resource "aws_iam_instance_profile" "petclinic-master-server-profile" {
-  name = "Ayaz petclinic-master-server-profile"
+  name = "ayaz-petclinic-master-server-profile"
   role = aws_iam_role.petclinic-master-server-s3-role.name
 }
 
